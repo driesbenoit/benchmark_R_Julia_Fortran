@@ -4,8 +4,9 @@
 
 Albert and Chib (1993). Bayesian Analysis of Binary and Polychotomous Response Data. *Journal of the American Statistical Association*, 88(422), 669-679.
 
-Replication from the performance comparison I did in 2015 (see old [blogpost](https://taptoenix.wordpress.com/2015/10/31/speed-comparison-between-r-julia-and-fortran-on-bayesian-probit-regression/)).
-Results show a strong performance improvement for Julia versus Fortran/R.
+This is a replication of the performance comparison I did in 2015 (see old [blogpost](https://taptoenix.wordpress.com/2015/10/31/speed-comparison-between-r-julia-and-fortran-on-bayesian-probit-regression/)).
+The folder v2015 contains the 2015 version of the code and v2021 contains the updated codes.
+The results show a strong performance improvement for Julia versus Fortran/R.
 The difference between Fortran and R has remained fairly the same.
 
 ![alt text](v2021/R/results.png)
