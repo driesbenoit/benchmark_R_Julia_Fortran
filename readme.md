@@ -55,7 +55,7 @@ The calculated execution times only relate to the wall time of the execution of 
 The runtimes presented below is the average over 5 executions of the code on the same data.
 I ran the code on my Lenovo T480s laptop (CPU: i5-8250, MEM: 16 Gb DDR4, OS: ArchLinux).
 R version 4.0.4, Julia version 1.5.4 and the Fortran compiler I used was gfortran (GCC 10.2.0) with the -03 optimization flag.
-That the Fortran code was compiled against the LAPACK library (version 3.9.0).
+The Fortran code was compiled against the LAPACK/BLAS library (version 3.9.0).
 
 Note that for the Julia code, it was necessary to get the dot product out of the loop (in the Fortran code, this did not lead to a performance gain):
 ```julia
