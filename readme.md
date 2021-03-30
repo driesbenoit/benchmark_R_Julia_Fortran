@@ -15,10 +15,10 @@ The difference between Fortran and R has remained fairly the same.
 Almost 6 years ago, I did a small performance comparison of R, Julia and Fortran on the Bayesian binary probit model.
 You can find a blogpost on that endavour [here](https://taptoenix.wordpress.com/2015/10/31/speed-comparison-between-r-julia-and-fortran-on-bayesian-probit-regression/).
 Even though I was very positive about the capabilities of Julia at that time, I never really started to use Julia for my computational work.
-Julia was on version 0.4.0 and much more stable than the earlier version I've tried, but still the syntax kept changing quite a bit and that made me hesitant to start a project in the language.
+Julia was on version 0.4.0 and much more stable than the earlier version I had tried, but still the syntax kept changing quite a bit and that made me hesitant to start a project in the language.
 Also, I had been using R as my main stats/data language since 2006 and I kept going back to the tool I knew that got the job done.
 
-But since Julia passed the 0.1.0 landmark, I felt that I should give it another try again.
+But since Julia passed the 1.0.0 landmark, I felt that I should give it another try again.
 Yes, that was 2018... time flies.
 Anyway, lately I had a smaller project to tackle and decided I would give Julia a new try.
 Collecting the data involved web scraping and I used the packages `HTML`,`Gumbo` and `Cascadia` for that.
