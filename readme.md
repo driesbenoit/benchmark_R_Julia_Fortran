@@ -31,13 +31,10 @@ And this is where this post is about.
 ## The algorithm 
 The model is:
 
-<img src="https://latex.codecogs.com/gif.latex?y^\star=X\beta+\epsilon\medspace\text{ with } " /> 
-</br>
-<img src="https://latex.codecogs.com/gif.latex?y=1\quad\text{ if } y^\star\ge 0 " /> 
-</br>
-<img src="https://latex.codecogs.com/gif.latex?y=0\quad\text{ if } y^\star< 0 " /> 
-</br>
-</br>
+<img src="https://render.githubusercontent.com/render/math?math=y^\star=X\beta%2B\epsilon" style="width:120px;height:auto;"> with:
+
+<img src="https://render.githubusercontent.com/render/math?math=y=1\quad\text{ if } y^\star\ge 0" style="width:130px;height:auto;"></br>
+<img src="https://render.githubusercontent.com/render/math?math=y=0\quad\text{ if } y^\star\lt 0" style="width:130px;height:auto;">
 
 The typical Bayesian approach for this model is to treat the latent variable  y\* as any other unknown parameter.
 Then, conditional on (the simulated) y\*, the problem reduces to the well-known linear regression model.
