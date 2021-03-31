@@ -32,10 +32,12 @@ And this is where this post is about.
 ## The algorithm 
 The model is:
 
-<img src="https://render.githubusercontent.com/render/math?math=y^\star=X\beta%2B\epsilon" style="width:120px;height:auto;"> with:
-
+<img src="https://render.githubusercontent.com/render/math?math=y^\star=X\beta%2B\epsilon" style="width:120px;height:auto;"></br>
+with:</br>
 <img src="https://render.githubusercontent.com/render/math?math=y=1\quad\text{ if } y^\star\ge 0" style="width:130px;height:auto;"></br>
-<img src="https://render.githubusercontent.com/render/math?math=y=0\quad\text{ if } y^\star\lt 0" style="width:130px;height:auto;">
+<img src="https://render.githubusercontent.com/render/math?math=y=0\quad\text{ if } y^\star\lt 0" style="width:130px;height:auto;"></br>
+and</br>
+<img src="https://render.githubusercontent.com/render/math?math=\epsilon \sim N(0,1)" style="width:100px;height:auto;">
 
 The typical Bayesian approach for this model is to treat the latent variable  y\* as any other unknown parameter.
 Then, conditional on (the simulated) y\*, the problem reduces to the well-known linear regression model.
