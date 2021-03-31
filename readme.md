@@ -43,7 +43,7 @@ An efficient Gibbs sampler for this model was first described in Albert & Chib (
 
 This model is well suited for comparing the performance of R, Julia and Fortran, because of the loops within loops that are required by the Gibbs sampler.
 That is, in each MCMC iteration, a latent y\* has to be simulated from the truncated normal distribution for each observation.
-It is well-know that this type of algorithm is very slow in interpreted languages as R (or Python).
+It is well-known that this type of algorithm is very slow in interpreted languages as R (or Python).
 
 For this benchmark, 5000 observations were simulated from the probit model, each containing two covariates plus an intercept.
 The dependent variable is binary.
@@ -57,7 +57,7 @@ I ran the code on my Lenovo T480s laptop (CPU: i5-8250, MEM: 16 Gb DDR4, OS: Arc
 R version 4.0.4, Julia version 1.5.4 and the Fortran compiler I used was gfortran (GCC 10.2.0) with the -03 optimization flag.
 The Fortran code was compiled against the LAPACK/BLAS library (version 3.9.0).
 
-Note that for the Julia code, it was necessary to get the dot product out of the loop (in the Fortran code, this did not lead to a performance gain):
+Note that for the Julia code, it was necessary to get the dot product out of the loop (in the Fortran code, this did not led to a performance gain):
 ```julia
 # Draw new value for ystar
 
@@ -76,8 +76,8 @@ end
 ystar = map((x,y)->rtnorm(x,1.0,y), X*beta, y)
 ```
 
-Option 2 and 3 lead to the same runtimes (about 1.5s). 
-Option 1 lead to runtimes slightly slower than Fortran (about 0.5s slower, so runtimes of about 3.1s).
+Option 2 and 3 led to the same runtimes (about 1.5s). 
+Option 1 led to runtimes slightly slower than Fortran (about 0.5s slower, so runtimes of about 3.1s).
 
 Also, using BLAS specialized `dsymv` routine for multiplying symmetric matrices with vectors, did not improve the Fortran performance (over the `matmul` intrinsic).
 
