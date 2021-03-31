@@ -90,6 +90,10 @@ Note that these results should be taken with a grain of salt.
 I've tried to make the different implementations as similar/fair as possible, but expert R, Fortran or Julia programmers might come up with improved implementations.
 Also, this speed comparison might not follow all rules for a formal benchmark.
 
+It's also important to realize that R, Julia (and Python) offer interfaces to performant libraries (often written in C/Fortran) specialized in Bayesian computations.
+For example JAGS, STAN or PyMC3 (Python only).
+Using one of these libraries probably give most Bayesians the best *bang for the buck* (ease of implementation vs speed).
+
 First remarkable finding is that Julia outperforms Fortran on this task.
 I was quite amazed by this as I believed that the Julia implementation could not be more performant than the Fortran code.
 This seems not to be the case here (even though I'm not sure what the reason is).
