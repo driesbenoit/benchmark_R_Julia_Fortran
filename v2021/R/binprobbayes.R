@@ -31,7 +31,7 @@ binprobbayes <- function(y,X,b0,B0,R){
 	for (i in 1:R){
 	
 		# Draw next value for ystar
-        ystar = mapply(FUN=rtnorm,mu=X%*%beta,sd=1,positive=df$y)
+        ystar = mapply(FUN=rtnorm,mu=X%*%beta,sd=1,positive=y)
 
 		# Draw new value for beta
 		beta <- B%*%(Bb + (t(X)%*%ystar)) + t(chol(B))%*%rnorm(n=k)
