@@ -23,7 +23,7 @@ function binprobbayes(y::BitArray{1}, X::Matrix{Float64}, # Data
   k = size(X,2)
 
   # 
-  B = Symmetric(inv(inv(B0) + *(X',X)))
+  B = Symmetric(inv(inv(B0) + X'X))
   Bb = B0\b0
 
   # Initialize space to save draws
@@ -46,7 +46,7 @@ function binprobbayes(y::BitArray{1}, X::Matrix{Float64}, # Data
     end
 
     # Draw new value for beta
-    beta = rand(MvNormal(B*(Bb+*(X',ystar)),B))
+    beta = rand(MvNormal(B*(Bb+X'ystar),B))
 
 	# Save draw
     betadraw[i,:] = beta
